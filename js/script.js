@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners and other code here
 
-  new Swiper('.swiper', {
+  new Swiper('.swiper--reviews', {
     slidesPerView: 1.3,
     spaceBetween: 20,
     centeredSlides: true,
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       769: {
         slidesPerView: 2.8,
         spaceBetween: 50,
+    centeredSlides: false,
       }
     },
     navigation: {
@@ -16,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  new Swiper('.swiper--who', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true
+    },
+  });
+
+  
 
   document.addEventListener('click', (e) => {
 
