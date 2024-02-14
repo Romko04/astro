@@ -27,6 +27,17 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+
+  var popupContainer = document.querySelector('.popup-container');
+  var scrollThreshold = 1300; // adjust this value as needed
+  window.addEventListener('scroll', function() {
+    if (window.scrollY >= scrollThreshold) {
+      popupContainer.style.bottom = '-1px'; // show the container
+    } else {
+      popupContainer.style.bottom = '-12rem'; // hide the container
+    }
+  });
+
   
 
   document.addEventListener('click', (e) => {

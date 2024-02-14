@@ -288,13 +288,25 @@ section {
 
 body {
     background-image: url('../img/back2.jpg');
-    /* background-size: contain; */
+    background-size: contain;
     background-repeat: repeat-y;
 }
 
 .head {
     position: relative;
     overflow: hidden;
+}
+
+.popup-container {
+    position: fixed;
+    padding: 2rem 0 3rem;
+    bottom: -12rem;
+    left: 0;
+    text-align: center;
+    transition: bottom .3s ease-in-out;
+    z-index: 10;
+    width: 100%;
+    background-color: #311311;
 }
 
 
@@ -425,6 +437,7 @@ body {
     font-weight: 700;
     font-size: 2.3rem;
     color: var(--white);
+    border: none;
     background: var(--orange);
     cursor: pointer;
 }
@@ -1221,7 +1234,7 @@ body {
 .footer__content {
     display: flex;
     justify-content: center;
-    margin-bottom: 8rem;
+    margin-bottom: 14rem;
     position: relative;
 }
 
@@ -1595,7 +1608,6 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 5rem;
-        padding-bottom: 8rem;
         text-align: center;
     }
     .footer__contacts{
@@ -1646,6 +1658,13 @@ width: 1.6rem;
     .document__container{
         font-size: 1.8rem;
     }
+
+
+    .button--popup{
+        margin-bottom: 0;
+        padding: 1.8rem;
+    }
+    
 }
 
 
@@ -1662,3 +1681,14 @@ width: 1.6rem;
 
 
 
+@media(min-width:991.98px) {
+    .btn, a{
+        transition: all .3s ease;
+    }
+    .btn:hover{
+        background-color: #deab44
+    }
+    a:hover{
+        color: #b9b9b9;
+    }
+}
